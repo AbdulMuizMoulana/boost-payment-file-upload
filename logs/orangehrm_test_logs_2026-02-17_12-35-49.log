@@ -1,0 +1,163 @@
+17-Feb-2026 12:35:49 PM - root - INFO - ******** Navigating to Login URL ********
+17-Feb-2026 12:35:50 PM - root - INFO - ******** Entering Username ********
+17-Feb-2026 12:35:52 PM - root - INFO - ******** Entering Password ********
+17-Feb-2026 12:35:52 PM - root - INFO - ******** Clicking Sign In Button ********
+17-Feb-2026 12:35:52 PM - root - INFO - ******** Login Action Completed ********
+17-Feb-2026 12:35:52 PM - root - INFO - ******** Navigating To Merchant Alias Screen ********
+17-Feb-2026 12:36:00 PM - root - INFO - ******** Clicked REF DATA Tab ********
+17-Feb-2026 12:36:00 PM - root - INFO - ******** Opened Reference Data Dropdown ********
+17-Feb-2026 12:36:00 PM - root - INFO - ******** Scrolling To Element: ('xpath', "//li[contains(text(),'Merchant Alias')]") ********
+17-Feb-2026 12:36:00 PM - root - INFO - ******** Scroll Completed ********
+17-Feb-2026 12:36:01 PM - root - INFO - ******** Clicked Merchant Alias Option ********
+17-Feb-2026 12:36:03 PM - root - INFO - ******** Merchant Alias Screen Loaded Successfully ********
+17-Feb-2026 12:36:03 PM - root - INFO - ******** Applying Filter For Email: 13190361@boostb-b.com ********
+17-Feb-2026 12:36:03 PM - root - INFO - ******** Clicked Filter Button ********
+17-Feb-2026 12:36:03 PM - root - INFO - ******** Opened Column Dropdown ********
+17-Feb-2026 12:36:03 PM - root - INFO - ******** Selected Merchant Key Column ********
+17-Feb-2026 12:36:05 PM - root - INFO - ******** Entered Email In Filter Field ********
+17-Feb-2026 12:36:05 PM - root - INFO - ******** Clicked Apply Filter ********
+17-Feb-2026 12:36:05 PM - root - INFO - ******** Filtered Grid Loaded Successfully ********
+17-Feb-2026 12:36:05 PM - root - INFO - ******** Starting Gateway Update For Supplier: Big Group ********
+17-Feb-2026 12:36:05 PM - root - INFO - ******** Clicking Filtered Transaction Row for Supplier: Big Group ********
+17-Feb-2026 12:36:06 PM - root - INFO - ******** Filtered Transaction Row Located ********
+17-Feb-2026 12:36:07 PM - root - INFO - ******** Filtered Transaction Row Clicked ********
+17-Feb-2026 12:36:07 PM - root - INFO - ******** Filtered Grid Loaded Successfully and clicked  ********
+17-Feb-2026 12:36:07 PM - root - INFO - ******** Clicking Kebab Menu for Supplier: Big Group ********
+17-Feb-2026 12:36:10 PM - root - INFO - ******** Kebab Element Located ********
+17-Feb-2026 12:36:10 PM - root - INFO - ******** Kebab Clicked Successfully ********
+17-Feb-2026 12:36:11 PM - root - INFO - ******** Clicked Edit Existing Record ********
+17-Feb-2026 12:36:11 PM - root - INFO - ******** Opened Gateway Dropdown ********
+17-Feb-2026 12:36:11 PM - root - INFO - ******** Selected Gateway: Airwallex ********
+17-Feb-2026 12:36:12 PM - root - INFO - ******** Opened Processor Dropdown ********
+17-Feb-2026 12:36:12 PM - root - INFO - ******** Selected Processor: Airwallex ********
+17-Feb-2026 12:36:15 PM - root - INFO - ******** Entered Gateway Supplier ID: acct_1hu8d7xROqiV40QlB6dryw ********
+17-Feb-2026 12:36:16 PM - root - INFO - ******** Clicked Confirm Changes ********
+17-Feb-2026 12:36:16 PM - root - INFO - ******** Success Popup Displayed ********
+17-Feb-2026 12:36:17 PM - root - INFO - ******** Closed Success Popup ********
+17-Feb-2026 12:36:17 PM - root - INFO - ******** Returned Back To Merchant Alias List ********
+17-Feb-2026 12:36:17 PM - root - INFO - ******** Applying Filter For Email: 13391750@boostb-b.com ********
+17-Feb-2026 12:36:17 PM - root - INFO - ******** Clicked Filter Button ********
+17-Feb-2026 12:36:17 PM - root - INFO - ******** Opened Column Dropdown ********
+17-Feb-2026 12:36:17 PM - root - INFO - ******** Selected Merchant Key Column ********
+17-Feb-2026 12:36:18 PM - root - INFO - ******** Entered Email In Filter Field ********
+17-Feb-2026 12:36:18 PM - root - INFO - ******** Clicked Apply Filter ********
+17-Feb-2026 12:36:18 PM - root - INFO - ******** Filtered Grid Loaded Successfully ********
+17-Feb-2026 12:36:18 PM - root - INFO - ******** Starting Gateway Update For Supplier: Payarto sp z o.o ********
+17-Feb-2026 12:36:18 PM - root - INFO - ******** Clicking Filtered Transaction Row for Supplier: Payarto sp z o.o ********
+17-Feb-2026 12:36:21 PM - root - INFO - ******** Filtered Transaction Row Located ********
+17-Feb-2026 12:36:21 PM - root - INFO - ******** Filtered Transaction Row Clicked ********
+17-Feb-2026 12:36:21 PM - root - INFO - ******** Filtered Grid Loaded Successfully and clicked  ********
+17-Feb-2026 12:36:21 PM - root - INFO - ******** Clicking Kebab Menu for Supplier: Payarto sp z o.o ********
+17-Feb-2026 12:36:24 PM - root - INFO - ******** Kebab Element Located ********
+17-Feb-2026 12:36:24 PM - root - INFO - ******** Kebab Clicked Successfully ********
+17-Feb-2026 12:36:25 PM - root - INFO - ******** Clicked Edit Existing Record ********
+17-Feb-2026 12:36:25 PM - root - INFO - ******** Opened Gateway Dropdown ********
+17-Feb-2026 12:36:25 PM - root - INFO - ******** Selected Gateway: Airwallex ********
+17-Feb-2026 12:36:26 PM - root - INFO - ******** Opened Processor Dropdown ********
+17-Feb-2026 12:36:26 PM - root - INFO - ******** Selected Processor: Airwallex ********
+17-Feb-2026 12:36:30 PM - root - INFO - ******** Entered Gateway Supplier ID: acct__6M7R2Y-ON6HHKUvhSVsHQ ********
+17-Feb-2026 12:36:30 PM - root - INFO - ******** Clicked Confirm Changes ********
+17-Feb-2026 12:36:32 PM - root - INFO - ******** Success Popup Displayed ********
+17-Feb-2026 12:36:32 PM - root - INFO - ******** Closed Success Popup ********
+17-Feb-2026 12:36:32 PM - root - INFO - ******** Returned Back To Merchant Alias List ********
+17-Feb-2026 12:36:32 PM - root - INFO - ******** Applying Filter For Email: almatecbci@boostintercept.com ********
+17-Feb-2026 12:36:32 PM - root - INFO - ******** Clicked Filter Button ********
+17-Feb-2026 12:36:32 PM - root - INFO - ******** Opened Column Dropdown ********
+17-Feb-2026 12:36:33 PM - root - INFO - ******** Selected Merchant Key Column ********
+17-Feb-2026 12:36:33 PM - root - INFO - ******** Entered Email In Filter Field ********
+17-Feb-2026 12:36:33 PM - root - INFO - ******** Clicked Apply Filter ********
+17-Feb-2026 12:36:33 PM - root - INFO - ******** Filtered Grid Loaded Successfully ********
+17-Feb-2026 12:36:33 PM - root - INFO - ******** Starting Gateway Update For Supplier: ALMATEC Masch GmbH ********
+17-Feb-2026 12:36:33 PM - root - INFO - ******** Clicking Filtered Transaction Row for Supplier: ALMATEC Masch GmbH ********
+17-Feb-2026 12:36:35 PM - root - INFO - ******** Filtered Transaction Row Located ********
+17-Feb-2026 12:36:35 PM - root - INFO - ******** Filtered Transaction Row Clicked ********
+17-Feb-2026 12:36:35 PM - root - INFO - ******** Filtered Grid Loaded Successfully and clicked  ********
+17-Feb-2026 12:36:35 PM - root - INFO - ******** Clicking Kebab Menu for Supplier: ALMATEC Masch GmbH ********
+17-Feb-2026 12:36:36 PM - root - INFO - ******** Kebab Element Located ********
+17-Feb-2026 12:36:36 PM - root - INFO - ******** Kebab Clicked Successfully ********
+17-Feb-2026 12:36:36 PM - root - INFO - ******** Clicked Edit Existing Record ********
+17-Feb-2026 12:36:36 PM - root - INFO - ******** Opened Gateway Dropdown ********
+17-Feb-2026 12:36:36 PM - root - INFO - ******** Selected Gateway: Airwallex ********
+17-Feb-2026 12:36:37 PM - root - INFO - ******** Opened Processor Dropdown ********
+17-Feb-2026 12:36:37 PM - root - INFO - ******** Selected Processor: Airwallex ********
+17-Feb-2026 12:36:40 PM - root - INFO - ******** Entered Gateway Supplier ID: acct_9wbSjwu5MiqjSqSkIjrw6A ********
+17-Feb-2026 12:36:41 PM - root - INFO - ******** Clicked Confirm Changes ********
+17-Feb-2026 12:36:42 PM - root - INFO - ******** Success Popup Displayed ********
+17-Feb-2026 12:36:43 PM - root - INFO - ******** Closed Success Popup ********
+17-Feb-2026 12:36:43 PM - root - INFO - ******** Returned Back To Merchant Alias List ********
+17-Feb-2026 12:36:43 PM - root - INFO - ******** Applying Filter For Email: 13323628@boostb-b.com ********
+17-Feb-2026 12:36:43 PM - root - INFO - ******** Clicked Filter Button ********
+17-Feb-2026 12:36:43 PM - root - INFO - ******** Opened Column Dropdown ********
+17-Feb-2026 12:36:43 PM - root - INFO - ******** Selected Merchant Key Column ********
+17-Feb-2026 12:36:44 PM - root - INFO - ******** Entered Email In Filter Field ********
+17-Feb-2026 12:36:44 PM - root - INFO - ******** Clicked Apply Filter ********
+17-Feb-2026 12:36:44 PM - root - INFO - ******** Filtered Grid Loaded Successfully ********
+17-Feb-2026 12:36:44 PM - root - INFO - ******** Starting Gateway Update For Supplier: iDOC Srl ********
+17-Feb-2026 12:36:44 PM - root - INFO - ******** Clicking Filtered Transaction Row for Supplier: iDOC Srl ********
+17-Feb-2026 12:36:45 PM - root - INFO - ******** Filtered Transaction Row Located ********
+17-Feb-2026 12:36:46 PM - root - INFO - ******** Filtered Transaction Row Clicked ********
+17-Feb-2026 12:36:46 PM - root - INFO - ******** Filtered Grid Loaded Successfully and clicked  ********
+17-Feb-2026 12:36:46 PM - root - INFO - ******** Clicking Kebab Menu for Supplier: iDOC Srl ********
+17-Feb-2026 12:36:47 PM - root - INFO - ******** Kebab Element Located ********
+17-Feb-2026 12:36:47 PM - root - INFO - ******** Kebab Clicked Successfully ********
+17-Feb-2026 12:36:47 PM - root - INFO - ******** Clicked Edit Existing Record ********
+17-Feb-2026 12:36:47 PM - root - INFO - ******** Opened Gateway Dropdown ********
+17-Feb-2026 12:36:47 PM - root - INFO - ******** Selected Gateway: Airwallex ********
+17-Feb-2026 12:36:48 PM - root - INFO - ******** Opened Processor Dropdown ********
+17-Feb-2026 12:36:48 PM - root - INFO - ******** Selected Processor: Airwallex ********
+17-Feb-2026 12:36:52 PM - root - INFO - ******** Entered Gateway Supplier ID: acct_-QCjN2GZPYOZRCqLS8yTGQ ********
+17-Feb-2026 12:36:52 PM - root - INFO - ******** Clicked Confirm Changes ********
+17-Feb-2026 12:36:54 PM - root - INFO - ******** Success Popup Displayed ********
+17-Feb-2026 12:36:54 PM - root - INFO - ******** Closed Success Popup ********
+17-Feb-2026 12:36:54 PM - root - INFO - ******** Returned Back To Merchant Alias List ********
+17-Feb-2026 12:36:54 PM - root - INFO - ******** Applying Filter For Email: 13507234@boostb-b.com ********
+17-Feb-2026 12:36:54 PM - root - INFO - ******** Clicked Filter Button ********
+17-Feb-2026 12:36:54 PM - root - INFO - ******** Opened Column Dropdown ********
+17-Feb-2026 12:36:54 PM - root - INFO - ******** Selected Merchant Key Column ********
+17-Feb-2026 12:36:55 PM - root - INFO - ******** Entered Email In Filter Field ********
+17-Feb-2026 12:36:55 PM - root - INFO - ******** Clicked Apply Filter ********
+17-Feb-2026 12:36:55 PM - root - INFO - ******** Filtered Grid Loaded Successfully ********
+17-Feb-2026 12:36:55 PM - root - INFO - ******** Starting Gateway Update For Supplier: Onetray SRL ********
+17-Feb-2026 12:36:55 PM - root - INFO - ******** Clicking Filtered Transaction Row for Supplier: Onetray SRL ********
+17-Feb-2026 12:36:58 PM - root - INFO - ******** Filtered Transaction Row Located ********
+17-Feb-2026 12:36:58 PM - root - INFO - ******** Filtered Transaction Row Clicked ********
+17-Feb-2026 12:36:58 PM - root - INFO - ******** Filtered Grid Loaded Successfully and clicked  ********
+17-Feb-2026 12:36:58 PM - root - INFO - ******** Clicking Kebab Menu for Supplier: Onetray SRL ********
+17-Feb-2026 12:37:01 PM - root - INFO - ******** Kebab Element Located ********
+17-Feb-2026 12:37:01 PM - root - INFO - ******** Kebab Clicked Successfully ********
+17-Feb-2026 12:37:02 PM - root - INFO - ******** Clicked Edit Existing Record ********
+17-Feb-2026 12:37:02 PM - root - INFO - ******** Opened Gateway Dropdown ********
+17-Feb-2026 12:37:02 PM - root - INFO - ******** Selected Gateway: Airwallex ********
+17-Feb-2026 12:37:03 PM - root - INFO - ******** Opened Processor Dropdown ********
+17-Feb-2026 12:37:03 PM - root - INFO - ******** Selected Processor: Airwallex ********
+17-Feb-2026 12:37:06 PM - root - INFO - ******** Entered Gateway Supplier ID: acct_lozkzLRFOiKjxxA_yEZVTg ********
+17-Feb-2026 12:37:07 PM - root - INFO - ******** Clicked Confirm Changes ********
+17-Feb-2026 12:37:10 PM - root - INFO - ******** Success Popup Displayed ********
+17-Feb-2026 12:37:10 PM - root - INFO - ******** Closed Success Popup ********
+17-Feb-2026 12:37:10 PM - root - INFO - ******** Returned Back To Merchant Alias List ********
+17-Feb-2026 12:37:10 PM - root - INFO - ******** Applying Filter For Email: 13291083@boostb-b.com ********
+17-Feb-2026 12:37:10 PM - root - INFO - ******** Clicked Filter Button ********
+17-Feb-2026 12:37:10 PM - root - INFO - ******** Opened Column Dropdown ********
+17-Feb-2026 12:37:11 PM - root - INFO - ******** Selected Merchant Key Column ********
+17-Feb-2026 12:37:11 PM - root - INFO - ******** Entered Email In Filter Field ********
+17-Feb-2026 12:37:11 PM - root - INFO - ******** Clicked Apply Filter ********
+17-Feb-2026 12:37:11 PM - root - INFO - ******** Filtered Grid Loaded Successfully ********
+17-Feb-2026 12:37:11 PM - root - INFO - ******** Starting Gateway Update For Supplier: STP*Catapult Ltd ********
+17-Feb-2026 12:37:11 PM - root - INFO - ******** Clicking Filtered Transaction Row for Supplier: STP*Catapult Ltd ********
+17-Feb-2026 12:37:13 PM - root - INFO - ******** Filtered Transaction Row Located ********
+17-Feb-2026 12:37:13 PM - root - INFO - ******** Filtered Transaction Row Clicked ********
+17-Feb-2026 12:37:13 PM - root - INFO - ******** Filtered Grid Loaded Successfully and clicked  ********
+17-Feb-2026 12:37:13 PM - root - INFO - ******** Clicking Kebab Menu for Supplier: STP*Catapult Ltd ********
+17-Feb-2026 12:37:15 PM - root - INFO - ******** Kebab Element Located ********
+17-Feb-2026 12:37:15 PM - root - INFO - ******** Kebab Clicked Successfully ********
+17-Feb-2026 12:37:15 PM - root - INFO - ******** Clicked Edit Existing Record ********
+17-Feb-2026 12:37:15 PM - root - INFO - ******** Opened Gateway Dropdown ********
+17-Feb-2026 12:37:16 PM - root - INFO - ******** Selected Gateway: Airwallex ********
+17-Feb-2026 12:37:16 PM - root - INFO - ******** Opened Processor Dropdown ********
+17-Feb-2026 12:37:16 PM - root - INFO - ******** Selected Processor: Airwallex ********
+17-Feb-2026 12:37:20 PM - root - INFO - ******** Entered Gateway Supplier ID: acct_eg1u3vQ7P02QPf3OR2XIog ********
+17-Feb-2026 12:37:20 PM - root - INFO - ******** Clicked Confirm Changes ********
+17-Feb-2026 12:37:22 PM - root - INFO - ******** Success Popup Displayed ********
+17-Feb-2026 12:37:22 PM - root - INFO - ******** Closed Success Popup ********
+17-Feb-2026 12:37:22 PM - root - INFO - ******** Returned Back To Merchant Alias List ********
+17-Feb-2026 12:37:37 PM - root - INFO - Uploaded file: AWX_Bank_Transfer_testing_v3_Latest.xlsx is clicked

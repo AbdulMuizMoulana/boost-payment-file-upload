@@ -1,0 +1,11 @@
+pytest
+selenium
+pytest-xdist
+pytest-html
+pytest-metadata
+openpyxl
+webdriver-manager
+py
+python-dotenv
+pandas
+xlwings
