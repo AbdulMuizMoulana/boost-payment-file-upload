@@ -1,5 +1,42 @@
-.idea/
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
 __pycache__/
-.env
+*.py[cod]
+
+# Logs
+logs/
+*.log
+
+# Reports & Screenshots
 Reports/
-*.pyc
+screenshots/
+
+# PyTest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environment variables
+.env
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Runtime / temp project files
+*.tmp
+*.temp
+*.flag
+last_start_amount.txt
+
+# Driver executables
+*.exe

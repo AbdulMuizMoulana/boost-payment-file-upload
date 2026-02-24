@@ -48,7 +48,9 @@ class Locators:
     EDIT_FILTER = (By.XPATH, "//button[@id='filter-container-btn']")
     RELOAD_DATA_BUTTON = (By.XPATH, "//button[@aria-label='Reload Data']")
 
-    DASHBOARD_TAB = (By.XPATH, "//button[@id='nav-tab-0']")
+    # DASHBOARD_TAB = (By.XPATH, "//button[@id='nav-tab-0']")
+    DASHBOARD_TAB = (By.XPATH, "//button[contains(normalize-space(),'Dashboard')]")
+
 
     SOURCES_DROPDOWN =(By.XPATH, "//button[normalize-space()='Sources']")
     SOURCES_OPTION_INTERNAL =(By.XPATH, "//li[normalize-space()='Internal']")

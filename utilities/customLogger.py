@@ -31,13 +31,17 @@ class LogMaker:
         logs_dir.mkdir(parents=True, exist_ok=True)
 
         timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-        log_file = logs_dir / f"orangehrm_test_logs_{timestamp}.log"
+        log_file = logs_dir / f"file_upload_test_logs_{timestamp}.log"
 
-        logger = logging.getLogger()
+        logger = logging.getLogger("Boost - File Upload")
         logger.setLevel(logging.INFO)
-        logger.handlers.clear()
+        logger.propagate = True
 
-        # -------- FILE HANDLER (No colors) --------
+        # MPORTANT: If handlers already exist → return logger
+        if logger.handlers:
+            return logger
+
+        # -------- FILE HANDLER --------
         file_handler = logging.FileHandler(log_file)
         file_formatter = logging.Formatter(
             "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -45,12 +49,12 @@ class LogMaker:
         )
         file_handler.setFormatter(file_formatter)
 
-        # -------- CONSOLE HANDLER (With Colors) --------
-        console_handler = logging.StreamHandler()
-        console_formatter = ColorFormatter("%(levelname)s: %(message)s")
-        console_handler.setFormatter(console_formatter)
+        # -------- CONSOLE HANDLER --------
+        # console_handler = logging.StreamHandler()
+        # console_formatter = ColorFormatter("%(levelname)s: %(message)s")
+        # console_handler.setFormatter(console_formatter)
 
         logger.addHandler(file_handler)
-        logger.addHandler(console_handler)
+        # logger.addHandler(console_handler)
 
         return logger

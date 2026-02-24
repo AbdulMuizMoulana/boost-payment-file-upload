@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -212,13 +214,42 @@ class MerchantAliasPage:
         self.logger.info(f"******** Entered Gateway Supplier ID: {gateway_supplier_id} ********")
 
         # -------- CONFIRM --------
+
+        # Wait until button is visible (not clickable)
         confirm_btn = self.wait.until(
-            EC.element_to_be_clickable(Locators.CONFIRM_CHANGES)
+            EC.presence_of_element_located(Locators.CONFIRM_CHANGES)
         )
 
+        # Scroll into view
+        self.driver.execute_script(
+            "arguments[0].scrollIntoView({block:'center'});",
+            confirm_btn
+        )
+
+        # Extra scroll (fix sticky headers)
+        self.driver.execute_script("window.scrollBy(0, 200);")
+
+        # Allow rendering to stabilize
+        time.sleep(1)
+
+        # JS click (bypasses overlay issues)
         self.driver.execute_script("arguments[0].click();", confirm_btn)
 
         self.logger.info("******** Clicked Confirm Changes ********")
+
+        # # -------- CONFIRM --------
+        #
+        # confirm_btn = self.wait.until(
+        #     EC.element_to_be_clickable(Locators.CONFIRM_CHANGES)
+        # )
+        # self.driver.execute_script(
+        #     "arguments[0].scrollIntoView({block:'center'});",
+        #     confirm_btn
+        # )
+        # time.sleep(0.5)
+        # self.driver.execute_script("arguments[0].click();", confirm_btn)
+        #
+        # self.logger.info("******** Clicked Confirm Changes ********")
 
         # -------- SUCCESS POPUP --------
         self.wait.until(
@@ -235,5 +266,6 @@ class MerchantAliasPage:
 
         # Go back to list
         self.driver.back()
+        self. wait.until(EC.visibility_of_element_located(Locators.MERCHANT_ALIAS_SCREEN))
 
         self.logger.info("******** Returned Back To Merchant Alias List ********")
