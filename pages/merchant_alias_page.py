@@ -237,19 +237,6 @@ class MerchantAliasPage:
 
         self.logger.info("******** Clicked Confirm Changes ********")
 
-        # # -------- CONFIRM --------
-        #
-        # confirm_btn = self.wait.until(
-        #     EC.element_to_be_clickable(Locators.CONFIRM_CHANGES)
-        # )
-        # self.driver.execute_script(
-        #     "arguments[0].scrollIntoView({block:'center'});",
-        #     confirm_btn
-        # )
-        # time.sleep(0.5)
-        # self.driver.execute_script("arguments[0].click();", confirm_btn)
-        #
-        # self.logger.info("******** Clicked Confirm Changes ********")
 
         # -------- SUCCESS POPUP --------
         self.wait.until(

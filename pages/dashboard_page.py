@@ -51,20 +51,7 @@ class DashboardPage:
         self.wait.until(EC.visibility_of_element_located(Locators.INTERNAL_SCREEN)).is_displayed()
         self.wait.until(EC.visibility_of_element_located(Locators.INTERNAL_TABLE)).is_displayed()
 
-        # validate and click the uploaded file
-        # file_loc = Path(file_path)
-        # excel_file_name = file_loc.name
-        # today_date = date.today().strftime("%m/%d/%Y")
-        #
-        # UPLOADED_FILE_LOCATOR = (By.XPATH,f"""//div[@role='row'  and .//*[contains(normalize-space(.),'{self.today_date}')]  and .//*[contains(normalize-space(.),'AWX_Bank_Transfer_testing_v3_Latest.xlsx')]  and .//*[contains(normalize-space(.),'VALIDATED')]]"""
-        #
-        #
-        # UPLOADED_FILE_ROW =self.wait.until(EC.visibility_of_element_located(UPLOADED_FILE_LOCATOR))
-        # if UPLOADED_FILE_ROW.is_displayed():
-        #     UPLOADED_FILE_ROW.click()
-        # else:
-        #     self.logger.error("UPLOADED_FILE_ROW is not displayed")
-        #     assert False
+
 
         file_loc = Path(file_path)
         excel_file_name = file_loc.name
@@ -91,18 +78,7 @@ class DashboardPage:
         else:
             self.logger.error("UPLOADED_FILE_ROW is not displayed")
             assert False
-            # status_cell = self.wait.until(EC.visibility_of_element_located(Locators.STATUS_CELL)).text
-            # file_name_cell = self.wait.until(EC.visibility_of_element_located(Locators.FILE_NAME_CELL)).text
-            # file_name = Locators.FILE_NAME.lower()
-            #
-            # if status_cell.lower() == 'validated' and file_name_cell.lower() == file_name:
-            #     self.driver.find_element(*Locators.FILE_NAME_CELL).click()
-            #     print("found file ")
-            # elif status_cell == 'Submitted' and file_name_cell == file_name:
-            #     self.driver.refresh()
-            #     print("file is already Submitted to the processor ")
-            # else:
-            #     print("file not found")
+
 
 
     def validate_total_amounts(self, excel_path):
