@@ -22,7 +22,7 @@ jobs:
 
     strategy:
       matrix:
-        environment: [DEV, UAT]   # 🔥 Runs BOTH daily (remove if single env)
+        environment: [DEV, UAT]   # Runs BOTH daily (remove if single env)
 
     env:
       #  ENV used by ReadConfig
