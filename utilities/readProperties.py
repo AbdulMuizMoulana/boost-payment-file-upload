@@ -34,4 +34,15 @@ class ReadConfig:
     UAT_PASSWORD = os.getenv("UAT_PASSWORD")
     UAT_URL = os.getenv("UAT_URL")
 
+    env = os.getenv("ENV")
+
+    if env == "DEV":
+        url =os.getenv("DEV_URL")
+        username = os.getenv("DEV_USERNAME")
+        password = os.getenv("DEV_PASSWORD")
+    else:
+        url =os.getenv("UAT_URL")
+        username = os.getenv("UAT_USERNAME")
+        password = os.getenv("UAT_PASSWORD")
+
 

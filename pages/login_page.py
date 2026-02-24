@@ -1,20 +1,20 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from locators.elements_locators import Locators
-from utilities.readProperties import ReadConfig
+# from utilities.readProperties import ReadConfig
 from utilities.customLogger import LogMaker
 
 
 
 class LoginPage:
-    # ========= UAT CREDENTIALS ========
-    USERNAME_UAT = ReadConfig.UAT_USERNAME
-    PASSWORD_UAT = ReadConfig.UAT_PASSWORD
-    URL_UAT = ReadConfig.UAT_URL
-    # ======= DEV CREDENTIALS =============
-    USERNAME_DEV = ReadConfig.DEV_USERNAME
-    PASSWORD_DEV = ReadConfig.DEV_PASSWORD
-    URL_DEV = ReadConfig.DEV_URL
+    # # ========= UAT CREDENTIALS ========
+    # USERNAME_UAT = ReadConfig.UAT_USERNAME
+    # PASSWORD_UAT = ReadConfig.UAT_PASSWORD
+    # URL_UAT = ReadConfig.UAT_URL
+    # # ======= DEV CREDENTIALS =============
+    # USERNAME_DEV = ReadConfig.DEV_USERNAME
+    # PASSWORD_DEV = ReadConfig.DEV_PASSWORD
+    # URL_DEV = ReadConfig.DEV_URL
 
     def __init__(self, driver):
         self.driver = driver

@@ -6,32 +6,32 @@ from pages.login_page import LoginPage
 from pages.merchant_alias_page import MerchantAliasPage
 from pages.dashboard_page import DashboardPage
 from utilities.excelUtils import read_payment_excel
-
-# ========= UAT CREDENTIALS ========
-UAT_USERNAME = LoginPage.USERNAME_UAT
-UAT_PASSWORD = LoginPage.PASSWORD_UAT
-UAT_URL = LoginPage.URL_UAT
+from utilities.readProperties import ReadConfig
 
 # ======= DEV CREDENTIALS =============
-DEV_USERNAME = LoginPage.USERNAME_DEV
-DEV_PASSWORD = LoginPage.PASSWORD_DEV
-DEV_URL = LoginPage.URL_DEV
+DEV_USERNAME = ReadConfig.DEV_USERNAME
+DEV_PASSWORD = ReadConfig.DEV_PASSWORD
+DEV_URL = ReadConfig.DEV_URL
 
+# ========= UAT CREDENTIALS ========
+UAT_USERNAME = ReadConfig.UAT_USERNAME
+UAT_PASSWORD = ReadConfig.UAT_PASSWORD
+UAT_URL = ReadConfig.UAT_URL
 
 # ========= CREDENTIALS =========
 
 ALL_ENV_DATA = [
     {
         "env": "dev",
-        "url": LoginPage.URL_DEV,
-        "username": LoginPage.USERNAME_DEV,
-        "password": LoginPage.PASSWORD_DEV
+        "url": DEV_URL,
+        "username": DEV_USERNAME,
+        "password": DEV_PASSWORD
     },
     {
         "env": "uat",
-        "url": LoginPage.URL_UAT,
-        "username": LoginPage.USERNAME_UAT,
-        "password": LoginPage.PASSWORD_UAT
+        "url": UAT_URL,
+        "username": UAT_USERNAME,
+        "password":UAT_PASSWORD
     },
 ]
 
