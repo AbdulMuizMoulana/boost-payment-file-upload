@@ -9,3 +9,4 @@ py
 python-dotenv
 pandas
 xlwings
+pandas
