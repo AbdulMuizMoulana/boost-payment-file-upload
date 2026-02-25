@@ -37,7 +37,7 @@ ALL_ENV_DATA = [
 
 
 @pytest.mark.parametrize("t_data", ALL_ENV_DATA)
-def test_airwallex_gateway_update_dev_uat(setup, t_data, request):
+def test_airwallex_gateway_update_and_upload(setup, t_data, request):
     selected_env = request.config.getoption("env").lower()
 
     # Skip environments not selected
