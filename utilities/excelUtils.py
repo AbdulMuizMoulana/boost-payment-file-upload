@@ -1,8 +1,9 @@
 import time
 
 import pandas as pd
-import xlwings as xw
 from pathlib import Path
+from utilities.customLogger import LogMaker
+logger = LogMaker.log_gen()
 
 
 # =========================
@@ -51,49 +52,57 @@ def get_next_start_amount():
 # =========================
 # SAFE EXCEL UPDATE (NO FORMAT LOSS)
 # =========================
+
+
+
+from openpyxl import load_workbook
+import time
+
+
 def update_amounts(excel_path):
+    logger.info("Updating Excel Amounts")
     start_amount = get_next_start_amount()
 
-    # app = xw.App(visible=False)
-    app = xw.App(visible=False, add_book=False)
+    wb = load_workbook(excel_path)
+    sheet =  wb['Payment_Entry'] #wb.active
 
-    try:
-        wb = app.books.open(str(excel_path))
-        sheet = wb.sheets[0]  # change if needed
+    HEADER_ROW = 3
+    DATA_START_ROW = HEADER_ROW + 1
 
-        HEADER_ROW = 3  # headers are on row 3
-        DATA_START_ROW = HEADER_ROW + 1
+    # Read headers from row 3
+    headers = [
+        cell.value for cell in sheet[HEADER_ROW]
+        if cell.value is not None
+    ]
 
-        headers = sheet.range(f"A{HEADER_ROW}").expand("right").value
+    invoice_col = headers.index("Invoice Amount") + 1
+    total_col = headers.index("Total Amount") + 1
 
-        invoice_col = headers.index("Invoice Amount") + 1
-        total_col = headers.index("Total Amount") + 1
+    row = DATA_START_ROW
+    amount = start_amount
 
-        row = HEADER_ROW + 1
-        amount = start_amount
+    # Find number of rows with data (like expand("table"))
+    logger.info(f"Updating Excel Amounts for {start_amount} Amount")
+    while sheet.cell(row=row, column=1).value is not None:
 
-        data_range = sheet.range(f"A{DATA_START_ROW}").expand("table")
-        num_rows = data_range.rows.count
+        sheet.cell(row=row, column=invoice_col).value = round(amount, 2)
+        sheet.cell(row=row, column=total_col).value = round(amount, 2)
 
-        #  EXACTLY 10 ROWS
-        for _ in range(num_rows):
-            sheet.range(row, invoice_col).value = f"{amount:.2f}"
-            sheet.range(row, total_col).value = f"{amount:.2f}"
-            amount += 11
-            row += 1
+        amount += 11
+        row += 1
+    wb.calculation.fullCalcOnLoad = True
+    logger.info("******* Formulas Re Calculated and excel sheet refreshed *******")
 
-        # refresh formulas (date column etc.)
-        wb.app.calculate()
-        wb.save()
-        wb.close()
-        time.sleep(1)
-        print(
-            f"Invoice amounts updated successfully "
-            f"(start={start_amount}, end={amount - 11})"
-        )
+    wb.save(excel_path)
+    logger.info(f"Updated Excel file saved Successfully")
+    wb.close()
 
-    finally:
-        app.quit()
+    time.sleep(1)
+
+    print(
+        f"Invoice amounts updated successfully "
+        f"(start={start_amount}, end={amount - 11})"
+    )
 
 
 from openpyxl import load_workbook
@@ -107,6 +116,7 @@ def read_excel_totals(excel_path):
 
        Sheet name: 'payment entry'
        """
+    logger.info(f"Reading Excel Totals for {excel_path}")
 
     wb = load_workbook(excel_path, data_only=True)
     sheet = wb["Payment_Entry"]
@@ -122,77 +132,10 @@ def read_excel_totals(excel_path):
     # Normalize → float
     payments_total = float(str(payments_total).replace(",", ""))
     invoice_total = float(str(invoice_total).replace(",", ""))
+    logger.info(f"Payments Total: {payments_total}")
 
     return payments_total, invoice_total
 
 
-"""
-def update_amounts(excel_path):
-    # Get the starting amount for this run
-    # (211, 311, or 411 depending on previous runs)
-    start_amount = get_next_start_amount()
 
-    # Launch Excel in background (no UI)
-    app = xw.App(visible=False)
-    try:
-        # Open the Excel file using xlwings
-        wb = app.books.open(str(excel_path))
 
-        # Access the first worksheet
-        # (change index or name if required)
-        sheet = wb.sheets[0]
-
-        # Row number where column headers exist in Excel
-        HEADER_ROW = 3
-
-        # Read all header names from header row
-        # expand("right") reads until last non-empty cell
-        headers = sheet.range(f"A{HEADER_ROW}").expand("right").value
-
-        # Find column index of "Invoice Amount"
-        # +1 because Excel columns are 1-based
-        invoice_col = headers.index("Invoice Amount") + 1
-
-        # Find column index of "Total Amount"
-        total_col = headers.index("Total Amount") + 1
-
-        # Start writing data from the row below headers
-        row = HEADER_ROW + 1
-
-        # Initialize amount with the start amount
-        amount = start_amount
-
-        # Update EXACTLY 10 rows
-        for _ in range(10):
-            # Write amount in "Invoice Amount" column
-            sheet.range(row, invoice_col).value = f"{amount:.2f}"
-
-            # Write same amount in "Total Amount" column
-            sheet.range(row, total_col).value = f"{amount:.2f}"
-
-            # Increase amount by 11 for next row
-            amount += 11
-
-            # Move to next row
-            row += 1
-
-        # Force Excel to recalculate formulas
-        # (important for date or calculated columns)
-        wb.app.calculate()
-
-        # Save changes to the same file
-        wb.save()
-
-        # Close workbook
-        wb.close()
-
-        # Log success info
-        print(
-            f"Invoice amounts updated successfully "
-            f"(start={start_amount}, end={amount - 11})"
-        )
-
-    finally:
-        # Always close Excel application to avoid zombie processes
-        app.quit()
-"""
