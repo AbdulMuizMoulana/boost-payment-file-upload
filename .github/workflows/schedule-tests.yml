@@ -11,11 +11,12 @@ on:
       environment:
         description: "Select Environment"
         required: true
-        default: "DEV"
+        default: "ALL"
         type: choice
         options:
           - DEV
           - UAT
+          - ALL
 
 jobs:
   test:
@@ -23,7 +24,7 @@ jobs:
 
     strategy:
       matrix:
-        environment: [DEV, UAT]   # Runs BOTH daily (remove if single env)
+        environment: [DEV, UAT, ALL]   # Runs BOTH daily (remove if single env)
 
     env:
       #  ENV used by ReadConfig
