@@ -36,13 +36,13 @@ ALL_ENV_DATA = [
 ]
 
 
-@pytest.mark.parametrize("t_data", ALL_ENV_DATA)
-def test_airwallex_gateway_update_and_upload(setup, t_data, request):
+@pytest.mark.parametrize("environment", ALL_ENV_DATA)
+def test_airwallex_gateway_update_and_upload(setup, environment, request):
     selected_env = request.config.getoption("env").lower()
 
     # Skip environments not selected
-    if selected_env != "all" and t_data["env"] != selected_env:
-        pytest.skip(f"Skipping {t_data['env']} environment")
+    if selected_env != "all" and environment["env"] != selected_env:
+        pytest.skip(f"Skipping {environment['env']} environment")
 
     driver = setup
 
@@ -55,7 +55,7 @@ def test_airwallex_gateway_update_and_upload(setup, t_data, request):
     merchant = MerchantAliasPage(driver)
     dashboard = DashboardPage(driver)
 
-    login.login(t_data["url"], t_data["username"], t_data["password"])
+    login.login(environment["url"], environment["username"], environment["password"])
 
     merchant.navigate_to_merchant_alias()
 

@@ -1,5 +1,7 @@
 import pandas as pd
 from pathlib import Path
+from openpyxl import load_workbook
+import time
 from utilities.customLogger import LogMaker
 
 logger = LogMaker.log_gen()
@@ -52,11 +54,6 @@ def get_next_start_amount():
 # SAFE EXCEL UPDATE (NO FORMAT LOSS)
 # =========================
 
-
-from openpyxl import load_workbook
-import time
-
-
 def update_amounts(excel_path):
     logger.info("Updating Excel Amounts")
     start_amount = get_next_start_amount()
@@ -100,10 +97,6 @@ def update_amounts(excel_path):
         f"Invoice amounts updated successfully "
         f"(start={start_amount}, end={amount - 11})"
     )
-
-
-from openpyxl import load_workbook
-
 
 def read_excel_totals(excel_path):
     logger.info(f"Reading Excel Totals for {excel_path}")

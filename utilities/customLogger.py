@@ -37,7 +37,7 @@ class LogMaker:
         logger.setLevel(logging.INFO)
         logger.propagate = True
 
-        # MPORTANT: If handlers already exist → return logger
+        # IMPORTANT: If handlers already exist → return logger
         if logger.handlers:
             return logger
 
